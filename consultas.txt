@@ -1,1 +1,31 @@
-db.nombreDeLaColeccion.find().pretty();
+--Leer Todos los Documentos
+db.Deportistas.find().pretty();
+
+--Leer Documentos con Condiciones Específicas
+
+db.deportistas.find({ "nacionalidad": "Colombiana" }).pretty();
+
+-- Actualizar un Solo Documento
+
+db.Deportistas.updateOne(
+  { "nombre": "Juan Pérez" },
+  { $set: { "estadisticas.goles": 6 } }
+);
+
+--Actualizar Varios Documentos
+
+db.Deportistas.updateMany(
+  { "nacionalidad": "Colombiana" },
+  { $inc: { "estadisticas.goles": 1 } }
+);
+
+
+--Eliminar un Solo Documento
+db.Deportistas.deleteOne({ "nombre": "Juan Pérez" });
+
+--Eliminar Varios Documentos
+
+db.Deportistas.deleteMany({ "nacionalidad": "Colombiana" });
+
+
+
