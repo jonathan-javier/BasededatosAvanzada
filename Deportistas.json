@@ -13,3 +13,36 @@ db.deportistas.insertOne({
     "tarjetasRojas": 0
   }
 });
+
+
+
+db.deportistas.insertMany([
+  {
+    "nombre": "Carlos Gómez",
+    "edad": 28,
+    "nacionalidad": "Colombiana",
+    "posicion": "Defensor",
+    "equipoActual": ObjectId("612df5a4c2d412c6b7d8f3b6"),
+    "estadisticas": {
+      "partidosJugados": 12,
+      "goles": 1,
+      "asistencias": 1,
+      "tarjetasAmarillas": 3,
+      "tarjetasRojas": 1
+    }
+  },
+  {
+    "nombre": "Andrés Martínez",
+    "edad": 21,
+    "nacionalidad": "Colombiana",
+    "posicion": "Delantero",
+    "equipoActual": ObjectId("612df5a4c2d412c6b7d8f3b7"),
+    "estadisticas": {
+      "partidosJugados": 15,
+      "goles": 9,
+      "asistencias": 5,
+      "tarjetasAmarillas": 2,
+      "tarjetasRojas": 0
+    }
+  }
+]);
