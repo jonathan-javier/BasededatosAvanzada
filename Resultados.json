@@ -1,0 +1,19 @@
+db.resultados.insertOne({
+  "_id": ObjectId(),
+  "encuentro": ObjectId("encuentroId"),
+  "resultado": "3-1",
+  "detalles": {
+    "goles": [
+      {"jugador": ObjectId("jugadorId1"), "minuto": 12},
+      {"jugador": ObjectId("jugadorId2"), "minuto": 47},
+      {"jugador": ObjectId("jugadorId1"), "minuto": 58}
+    ],
+    "tarjetasAmarillas": [
+      {"jugador": ObjectId("jugadorId3"), "minuto": 22},
+      {"jugador": ObjectId("jugadorId4"), "minuto": 76}
+    ],
+    "tarjetasRojas": [
+      {"jugador": ObjectId("jugadorId5"), "minuto": 80}
+    ]
+  }
+});

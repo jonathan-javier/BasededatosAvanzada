@@ -1,0 +1,13 @@
+db.encuentrosDeportivos.insertOne({
+  "_id": ObjectId(),
+  "equipo1": ObjectId("equipoId1"),
+  "equipo2": ObjectId("equipoId2"),
+  "fecha": ISODate("2024-06-15T20:00:00Z"),
+  "estadio": "Estadio Metropolitano",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId1"),
+    "asistentes": [ObjectId("arbitroId2"), ObjectId("arbitroId3")]
+  },
+  "estado": "Programado"
+});

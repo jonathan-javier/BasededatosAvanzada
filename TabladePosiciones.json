@@ -1,0 +1,12 @@
+db.tablaDePosiciones.insertOne({
+  "_id": ObjectId(),
+  "equipo": ObjectId("equipoId"),
+  "puntos": 9,
+  "partidosJugados": 3,
+  "victorias": 3,
+  "empates": 0,
+  "derrotas": 0,
+  "golesFavor": 7,
+  "golesContra": 2,
+  "diferenciaGoles": 5
+});

@@ -1,0 +1,7 @@
+db.arbitros.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Wilmar Roldán",
+  "edad": 40,
+  "nacionalidad": "Colombiana",
+  "partidosDirigidos": [ObjectId("partidoId1"), ObjectId("partidoId2"), ...]
+});

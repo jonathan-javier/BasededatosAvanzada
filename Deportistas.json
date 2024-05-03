@@ -1,0 +1,15 @@
+db.deportistas.insertOne({
+  "_id": ObjectId(),
+  "nombre": "James Rodríguez",
+  "edad": 30,
+  "nacionalidad": "Colombiana",
+  "posicion": "Mediocampista",
+  "equipoActual": ObjectId("equipoId"),
+  "estadisticas": {
+    "partidosJugados": 5,
+    "goles": 3,
+    "asistencias": 2,
+    "tarjetasAmarillas": 1,
+    "tarjetasRojas": 0
+  }
+});

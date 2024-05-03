@@ -1,0 +1,7 @@
+db.entrenadores.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Reinaldo Rueda",
+  "edad": 63,
+  "nacionalidad": "Colombiana",
+  "equipo": ObjectId("equipoId")
+});

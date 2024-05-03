@@ -1,0 +1,7 @@
+db.equipos.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Colombia",
+  "entrenador": ObjectId("entrenadorId"),
+  "jugadores": [ObjectId("jugadorId1"), ObjectId("jugadorId2"), ...],
+  "grupo": "A"
+});
