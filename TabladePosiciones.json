@@ -10,3 +10,55 @@ db.tablaDePosiciones.insertOne({
   "golesContra": 2,
   "diferenciaGoles": 5
 });
+
+db.tablaDePosiciones.insertOne({
+  "_id": ObjectId(),
+  "equipo": ObjectId("equipoId1"), // ID del equipo "Argentina"
+  "puntos": 10,
+  "partidosJugados": 4,
+  "victorias": 3,
+  "empates": 1,
+  "derrotas": 0,
+  "golesFavor": 8,
+  "golesContra": 3,
+  "diferenciaGoles": 5
+});
+
+db.tablaDePosiciones.insertOne({
+  "_id": ObjectId(),
+  "equipo": ObjectId("equipoId2"), // ID del equipo "Brasil"
+  "puntos": 7,
+  "partidosJugados": 4,
+  "victorias": 2,
+  "empates": 1,
+  "derrotas": 1,
+  "golesFavor": 6,
+  "golesContra": 4,
+  "diferenciaGoles": 2
+});
+
+db.tablaDePosiciones.insertOne({
+  "_id": ObjectId(),
+  "equipo": ObjectId("equipoId3"), // ID del equipo "España"
+  "puntos": 9,
+  "partidosJugados": 4,
+  "victorias": 3,
+  "empates": 0,
+  "derrotas": 1,
+  "golesFavor": 10,
+  "golesContra": 5,
+  "diferenciaGoles": 5
+});
+
+db.tablaDePosiciones.insertOne({
+  "_id": ObjectId(),
+  "equipo": ObjectId("equipoId4"), // ID del equipo "Alemania"
+  "puntos": 6,
+  "partidosJugados": 4,
+  "victorias": 2,
+  "empates": 0,
+  "derrotas": 2,
+  "golesFavor": 7,
+  "golesContra": 6,
+  "diferenciaGoles": 1
+});
