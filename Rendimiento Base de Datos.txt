@@ -1,0 +1,20 @@
+// Crear índice en la colección de Deportistas
+db.deportistas.createIndex({ deportista: 1 });
+
+// Crear índice en la colección de Encuentros Deportivos
+db.encuentrosDeportivos.createIndex({ fecha25052024: 1 });
+
+// Crear índice en la colección de Resultados
+db.resultados.createIndex({ encuentro: 1 });
+
+// Habilitar el sharding en la base de datos del torneo
+mkdir C:\data\configdb
+mongod --configsvr --replSet csrs --port 27019 --dbpath C:\data\configdb
+sh.enableSharding("torneo_Futbol");
+
+mkdir C:\data\shard1
+mongod --shardsvr --replSet shard1 --port 27018 --dbpath C:\data\shard1
+
+mkdir C:\data\shard2
+mongod --shardsvr --replSet shard2 --port 27020 --dbpath C:\data\shard2
+
