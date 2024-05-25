@@ -1,82 +1,69 @@
-db.deportistas.insertOne({
+db.encuentrosDeportivos.insertOne({
   "_id": ObjectId(),
-  "nombre": "James Rodríguez",
-  "edad": 30,
-  "nacionalidad": "Colombiana",
-  "posicion": "Mediocampista",
-  "equipoActual": ObjectId("equipoId"),
-  "estadisticas": {
-    "partidosJugados": 5,
-    "goles": 3,
-    "asistencias": 2,
-    "tarjetasAmarillas": 1,
-    "tarjetasRojas": 0
-  }
+  "equipo1": ObjectId("612df5a4c2d412c6b7d8f3b6"), // ID de "Barcelona"
+  "equipo2": ObjectId("612df5a4c2d412c6b7d8f3b7"), // ID de "Real Madrid"
+  "fecha": ISODate("2024-05-10T20:00:00Z"),
+  "estadio": "Camp Nou",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId1"),
+    "asistentes": [ObjectId("arbitroId2"), ObjectId("arbitroId3")]
+  },
+  "estado": "Programado"
 });
 
-
-db.deportistas.insertOne({
+db.encuentrosDeportivos.insertOne({
   "_id": ObjectId(),
-  "nombre": "Sergio Ramos",
-  "edad": 34,
-  "nacionalidad": "Española",
-  "posicion": "Defensor",
-  "equipoActual": ObjectId("equipoId"),
-  "estadisticas": {
-    "partidosJugados": 10,
-    "goles": 4,
-    "asistencias": 1,
-    "tarjetasAmarillas": 2,
-    "tarjetasRojas": 1
-  }
+  "equipo1": ObjectId("612df5a4c2d412c6b7d8f3b8"), // ID de "Liverpool"
+  "equipo2": ObjectId("612df5a4c2d412c6b7d8f3b9"), // ID de "Manchester United"
+  "fecha": ISODate("2024-06-20T18:30:00Z"),
+  "estadio": "Anfield",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId4"),
+    "asistentes": [ObjectId("arbitroId5"), ObjectId("arbitroId6")]
+  },
+  "estado": "Programado"
 });
 
-db.deportistas.insertOne({
+db.encuentrosDeportivos.insertOne({
   "_id": ObjectId(),
-  "nombre": "Lionel Messi",
-  "edad": 33,
-  "nacionalidad": "Argentina",
-  "posicion": "Delantero",
-  "equipoActual": ObjectId("equipoId"),
-  "estadisticas": {
-    "partidosJugados": 20,
-    "goles": 15,
-    "asistencias": 10,
-    "tarjetasAmarillas": 1,
-    "tarjetasRojas": 0
-  }
+  "equipo1": ObjectId("612df5a4c2d412c6b7d8f3ba"), // ID de "Bayern Munich"
+  "equipo2": ObjectId("612df5a4c2d412c6b7d8f3bb"), // ID de "Borussia Dortmund"
+  "fecha": ISODate("2024-07-01T16:00:00Z"),
+  "estadio": "Allianz Arena",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId7"),
+    "asistentes": [ObjectId("arbitroId8"), ObjectId("arbitroId9")]
+  },
+  "estado": "Programado"
 });
 
-
-db.deportistas.insertOne({
+db.encuentrosDeportivos.insertOne({
   "_id": ObjectId(),
-  "nombre": "Neymar Jr.",
-  "edad": 29,
-  "nacionalidad": "Brasileña",
-  "posicion": "Delantero",
-  "equipoActual": ObjectId("equipoId"),
-  "estadisticas": {
-    "partidosJugados": 18,
-    "goles": 12,
-    "asistencias": 7,
-    "tarjetasAmarillas": 3,
-    "tarjetasRojas": 0
-  }
+  "equipo1": ObjectId("612df5a4c2d412c6b7d8f3bc"), // ID de "Juventus"
+  "equipo2": ObjectId("612df5a4c2d412c6b7d8f3bd"), // ID de "AC Milan"
+  "fecha": ISODate("2024-08-15T20:45:00Z"),
+  "estadio": "Allianz Stadium",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId10"),
+    "asistentes": [ObjectId("arbitroId11"), ObjectId("arbitroId12")]
+  },
+  "estado": "Programado"
 });
 
-db.deportistas.insertOne({
+db.encuentrosDeportivos.insertOne({
   "_id": ObjectId(),
-  "nombre": "Kylian Mbappé",
-  "edad": 22,
-  "nacionalidad": "Francesa",
-  "posicion": "Delantero",
-  "equipoActual": ObjectId("equipoId"),
-  "estadisticas": {
-    "partidosJugados": 25,
-    "goles": 20,
-    "asistencias": 9,
-    "tarjetasAmarillas": 2,
-    "tarjetasRojas": 0
-  }
+  "equipo1": ObjectId("612df5a4c2d412c6b7d8f3be"), // ID de "Paris Saint-Germain"
+  "equipo2": ObjectId("612df5a4c2d412c6b7d8f3bf"), // ID de "Olympique de Marseille"
+  "fecha": ISODate("2024-09-10T21:00:00Z"),
+  "estadio": "Parc des Princes",
+  "fase": "Liga",
+  "arbitros": {
+    "principal": ObjectId("arbitroId13"),
+    "asistentes": [ObjectId("arbitroId14"), ObjectId("arbitroId15")]
+  },
+  "estado": "Programado"
 });
-
