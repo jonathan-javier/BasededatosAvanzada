@@ -1,0 +1,154 @@
+//Se realizo la réplica para la realización de las instancias
+DbDeportesSet = new ReplSetTest ({name: " DbDeporteSet ", nodes: 3})
+
+//Se realizo el proceso de la realización de los nodos de DbDeportes 
+DbDeportesSet.startSet()
+
+//Empezamos a ejecutar la réplica dbDeporteSet 
+dbDeporteSet.initiate()
+
+//Comprobamos la conexión de la instancia 
+conn=new Mongo(“DESKTOP-S1SNVMU:20003")
+
+//podemos obtener conexión a la base de datos que vamos a realizare el ingreso de los datos
+testDB=con.getDB(“BasededatosAvanzada”)
+
+
+//Realizamos una verificación de la base de datos y miramos si el nodo que estamos es primario 
+testDB.isMaster()
+
+//se ingresaron Datos 
+testDB.Arbitros.insert(
+{
+ _id: "1",
+ nombre : " Javier Roldan ",
+ edad: "40",
+nacionalidad: "colombiana"
+});
+
+testDB.Arbitros.insert(
+{
+ _id: "2",
+ nombre : " Wilson Gomez ",
+ edad: "45",
+nacionalidad: "uruguayo"
+});
+testDB.Arbitros.insert(
+{
+ _id: "3",
+ nombre : " Cuti Romero ",
+ edad: "35",
+nacionalidad: "argentino"
+});
+
+testDB.entrenadores.insert({
+  _id: "1",
+  nombre: "Reinaldo Rueda",
+  edad: "63",
+  nacionalidad: "Colombiana",
+  equipo: "1"
+});
+testDB.entrenadores.insert({
+  _id: "2",
+  nombre: "Pep guardiola",
+  edad: "53",
+  nacionalidad: "español",
+  equipo: "2"
+});
+testDB.entrenadores.insert({
+  _id: "3",
+  nombre: "Jurgen Klopp",
+  edad: "56",
+  nacionalidad: "Aleman",
+  equipo: "3"
+});
+
+
+testDB.Deportistas.insert({
+ _id: "1",
+ nombre : " Javier Roldan ",
+ edad: "40",
+nacionalidad: "Colombiana",
+posicion: "Mediocampista",
+estadisticas: {
+partidosJugados: "5",
+goles: "3",
+asistencias: "2",
+tarjetasAmarillas: "1",
+tarjetasRojas: "0"
+  }
+});
+testDB.Deportistas.insert(
+{
+ _id: "2",
+ nombre : " James Rodriguez ",
+ edad: "35",
+nacionalidad: "Colombiana",
+posicion: "Mediocampista",
+estadisticas: {
+partidosJugados: "7",
+goles: "4",
+asistencias: "5",
+tarjetasAmarillas: "1",
+tarjetasRojas: "0"
+  }
+});
+testDB.Deportistas.insert(
+{
+ _id: "3",
+ nombre : " Radamel Falcao ",
+ edad: "38",
+nacionalidad: "Colombiana",
+posicion: "Delantero",
+estadisticas: {
+partidosJugados: "10",
+goles: "6",
+asistencias: "",
+tarjetasAmarillas: "1",
+tarjetasRojas: "0"
+  }
+});
+
+//Verificamos que los datos que hemos almacenado se hallan registrado en la base de datos correctamente
+
+testDB.entrenadores.count();
+testDB.Arbitros.count();
+testDB.Deportistas.count();
+
+//Realizamos la replica con los nodos secundarios 
+
+connSecondary = new Mongo("DESKTOP-S1SNVMU:20004")
+
+//Verificamos si el nodo secundario es el master , cuando colocamos el comando nos damos cuenta que el nodo secundario no es el Master
+secondaryTestDB.isMaster() 
+
+//Realizamos una verificación del nodo secundario 
+secondaryTestDB.Editoriales.count();
+connSecondary.setSecondaryOk()
+secondaryTestDB.Editoriales.count();
+
+//Se realizo una caída al nodo primario donde utilizamos el comando
+
+connPrimary = new Mongo("localhost:20003") 
+primaryDB = connPrimary.getDB("BasededatosAvanzada") 
+
+//Realizamos la verificación del nodo primario 
+primaryDB.isMaster()
+
+//Realizamos un comando de apagado para desactivar el nodo primario.
+primaryDB.adminCommand({shutdown : 1})
+
+//Hacemos una comprobación del nodo primario y volvemos a realizar la verificación si es el master o no es el master, donde nos muestra que el nodo ya es otro puerto
+connNewPrimary = new Mongo("localhost:20001") 
+newPrimaryDB = connNewPrimary.getDB("BasededatosAvanzada")
+newPrimaryDB.isMaster()
+
+
+
+
+
+
+
+
+
+
