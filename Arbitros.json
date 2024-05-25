@@ -5,3 +5,35 @@ db.arbitros.insertOne({
   "nacionalidad": "Colombiana",
   "partidosDirigidos": [ObjectId("partidoId1"), ObjectId("partidoId2"), ...]
 });
+
+db.arbitros.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Carlos Herrera",
+  "edad": 35,
+  "nacionalidad": "Argentino",
+  "partidosDirigidos": [ObjectId("partidoId3"), ObjectId("partidoId4")]
+});
+
+db.arbitros.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Andrés Pérez",
+  "edad": 42,
+  "nacionalidad": "Brasileño",
+  "partidosDirigidos": [ObjectId("partidoId5"), ObjectId("partidoId6")]
+});
+
+db.arbitros.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Laura Martínez",
+  "edad": 38,
+  "nacionalidad": "Mexicana",
+  "partidosDirigidos": [ObjectId("partidoId7"), ObjectId("partidoId8")]
+});
+
+db.arbitros.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Juan Rodríguez",
+  "edad": 45,
+  "nacionalidad": "Chileno",
+  "partidosDirigidos": [ObjectId("partidoId9"), ObjectId("partidoId10")]
+});
