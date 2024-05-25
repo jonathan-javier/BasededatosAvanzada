@@ -15,34 +15,68 @@ db.deportistas.insertOne({
 });
 
 
-
-db.deportistas.insertMany([
-  {
-    "nombre": "Carlos Gómez",
-    "edad": 28,
-    "nacionalidad": "Colombiana",
-    "posicion": "Defensor",
-    "equipoActual": ObjectId("612df5a4c2d412c6b7d8f3b6"),
-    "estadisticas": {
-      "partidosJugados": 12,
-      "goles": 1,
-      "asistencias": 1,
-      "tarjetasAmarillas": 3,
-      "tarjetasRojas": 1
-    }
-  },
-  {
-    "nombre": "Andrés Martínez",
-    "edad": 21,
-    "nacionalidad": "Colombiana",
-    "posicion": "Delantero",
-    "equipoActual": ObjectId("612df5a4c2d412c6b7d8f3b7"),
-    "estadisticas": {
-      "partidosJugados": 15,
-      "goles": 9,
-      "asistencias": 5,
-      "tarjetasAmarillas": 2,
-      "tarjetasRojas": 0
-    }
+db.deportistas.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Sergio Ramos",
+  "edad": 34,
+  "nacionalidad": "Española",
+  "posicion": "Defensor",
+  "equipoActual": ObjectId("equipoId"),
+  "estadisticas": {
+    "partidosJugados": 10,
+    "goles": 4,
+    "asistencias": 1,
+    "tarjetasAmarillas": 2,
+    "tarjetasRojas": 1
   }
-]);
+});
+
+db.deportistas.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Lionel Messi",
+  "edad": 33,
+  "nacionalidad": "Argentina",
+  "posicion": "Delantero",
+  "equipoActual": ObjectId("equipoId"),
+  "estadisticas": {
+    "partidosJugados": 20,
+    "goles": 15,
+    "asistencias": 10,
+    "tarjetasAmarillas": 1,
+    "tarjetasRojas": 0
+  }
+});
+
+
+db.deportistas.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Neymar Jr.",
+  "edad": 29,
+  "nacionalidad": "Brasileña",
+  "posicion": "Delantero",
+  "equipoActual": ObjectId("equipoId"),
+  "estadisticas": {
+    "partidosJugados": 18,
+    "goles": 12,
+    "asistencias": 7,
+    "tarjetasAmarillas": 3,
+    "tarjetasRojas": 0
+  }
+});
+
+db.deportistas.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Kylian Mbappé",
+  "edad": 22,
+  "nacionalidad": "Francesa",
+  "posicion": "Delantero",
+  "equipoActual": ObjectId("equipoId"),
+  "estadisticas": {
+    "partidosJugados": 25,
+    "goles": 20,
+    "asistencias": 9,
+    "tarjetasAmarillas": 2,
+    "tarjetasRojas": 0
+  }
+});
+
