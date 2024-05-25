@@ -5,3 +5,35 @@ db.entrenadores.insertOne({
   "nacionalidad": "Colombiana",
   "equipo": ObjectId("equipoId")
 });
+
+db.entrenadores.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Pep Guardiola",
+  "edad": 50,
+  "nacionalidad": "Española",
+  "equipo": ObjectId("equipoId1") // ID de "Manchester City"
+});
+
+db.entrenadores.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Jurgen Klopp",
+  "edad": 54,
+  "nacionalidad": "Alemana",
+  "equipo": ObjectId("equipoId2") // ID de "Liverpool"
+});
+
+db.entrenadores.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Zinedine Zidane",
+  "edad": 48,
+  "nacionalidad": "Francesa",
+  "equipo": ObjectId("equipoId3") // ID de "Real Madrid"
+});
+
+db.entrenadores.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Antonio Conte",
+  "edad": 51,
+  "nacionalidad": "Italiana",
+  "equipo": ObjectId("equipoId4") // ID de "Inter de Milán"
+});
