@@ -5,3 +5,35 @@ db.equipos.insertOne({
   "jugadores": [ObjectId("jugadorId1"), ObjectId("jugadorId2"), ...],
   "grupo": "A"
 });
+
+db.equipos.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Argentina",
+  "entrenador": ObjectId("entrenadorId1"), // ID de "Lionel Scaloni"
+  "jugadores": [ObjectId("jugadorId1"), ObjectId("jugadorId2"), ObjectId("jugadorId3")],
+  "grupo": "B"
+});
+
+db.equipos.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Brasil",
+  "entrenador": ObjectId("entrenadorId2"), // ID de "Tite"
+  "jugadores": [ObjectId("jugadorId4"), ObjectId("jugadorId5"), ObjectId("jugadorId6")],
+  "grupo": "C"
+});
+
+db.equipos.insertOne({
+  "_id": ObjectId(),
+  "nombre": "España",
+  "entrenador": ObjectId("entrenadorId3"), // ID de "Luis Enrique"
+  "jugadores": [ObjectId("jugadorId7"), ObjectId("jugadorId8"), ObjectId("jugadorId9")],
+  "grupo": "D"
+});
+
+db.equipos.insertOne({
+  "_id": ObjectId(),
+  "nombre": "Alemania",
+  "entrenador": ObjectId("entrenadorId4"), // ID de "Hansi Flick"
+  "jugadores": [ObjectId("jugadorId10"), ObjectId("jugadorId11"), ObjectId("jugadorId12")],
+  "grupo": "E"
+});
