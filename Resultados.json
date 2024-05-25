@@ -17,3 +17,87 @@ db.resultados.insertOne({
     ]
   }
 });
+
+
+db.resultados.insertOne({
+  "_id": ObjectId(),
+  "encuentro": ObjectId("encuentroId1"), // ID del encuentro entre "Argentina" y "Brasil"
+  "resultado": "2-2",
+  "detalles": {
+    "goles": [
+      {"jugador": ObjectId("jugadorId1"), "minuto": 15},
+      {"jugador": ObjectId("jugadorId4"), "minuto": 30},
+      {"jugador": ObjectId("jugadorId2"), "minuto": 60},
+      {"jugador": ObjectId("jugadorId5"), "minuto": 75}
+    ],
+    "tarjetasAmarillas": [
+      {"jugador": ObjectId("jugadorId6"), "minuto": 20},
+      {"jugador": ObjectId("jugadorId7"), "minuto": 55}
+    ],
+    "tarjetasRojas": [
+      {"jugador": ObjectId("jugadorId8"), "minuto": 90}
+    ]
+  }
+});
+
+db.resultados.insertOne({
+  "_id": ObjectId(),
+  "encuentro": ObjectId("encuentroId2"), // ID del encuentro entre "España" y "Alemania"
+  "resultado": "1-0",
+  "detalles": {
+    "goles": [
+      {"jugador": ObjectId("jugadorId9"), "minuto": 67}
+    ],
+    "tarjetasAmarillas": [
+      {"jugador": ObjectId("jugadorId10"), "minuto": 40},
+      {"jugador": ObjectId("jugadorId11"), "minuto": 85}
+    ],
+    "tarjetasRojas": []
+  }
+});
+
+db.resultados.insertOne({
+  "_id": ObjectId(),
+  "encuentro": ObjectId("encuentroId3"), // ID del encuentro entre "Francia" y "Italia"
+  "resultado": "4-3",
+  "detalles": {
+    "goles": [
+      {"jugador": ObjectId("jugadorId12"), "minuto": 10},
+      {"jugador": ObjectId("jugadorId13"), "minuto": 23},
+      {"jugador": ObjectId("jugadorId14"), "minuto": 45},
+      {"jugador": ObjectId("jugadorId15"), "minuto": 50},
+      {"jugador": ObjectId("jugadorId16"), "minuto": 60},
+      {"jugador": ObjectId("jugadorId17"), "minuto": 70},
+      {"jugador": ObjectId("jugadorId18"), "minuto": 80}
+    ],
+    "tarjetasAmarillas": [
+      {"jugador": ObjectId("jugadorId19"), "minuto": 30},
+      {"jugador": ObjectId("jugadorId20"), "minuto": 75}
+    ],
+    "tarjetasRojas": [
+      {"jugador": ObjectId("jugadorId21"), "minuto": 90}
+    ]
+  }
+});
+
+db.resultados.insertOne({
+  "_id": ObjectId(),
+  "encuentro": ObjectId("encuentroId4"), // ID del encuentro entre "Inglaterra" y "Portugal"
+  "resultado": "0-0",
+  "detalles": {
+    "goles": [],
+    "tarjetasAmarillas": [
+      {"jugador": ObjectId("jugadorId22"), "minuto": 50},
+      {"jugador": ObjectId("jugadorId23"), "minuto": 65}
+    ],
+    "tarjetasRojas": [
+      {"jugador": ObjectId("jugadorId24"), "minuto": 85}
+    ]
+  }
+});
+
+
+
+
+
+
